@@ -1,7 +1,7 @@
 FROM openjdk:17-jdk-slim
-WORKDIR /oci-microservice
-COPY /target/*.jar oci-microservice.jar
-COPY /src/main/resources/Wallet_javadev /oci-microservice-/Wallet_javadev
-ENV TNS_ADMIN=/oci-microservice/Wallet_javadev
+WORKDIR /oci-microservice-a01568601
+COPY /target/*.jar oci-microservice-a01568601.jar
+COPY /src/main/resources/Wallet_javadev /oci-microservice-a01568601/Wallet_javadev
+ENV TNS_ADMIN=/oci-microservice-a01568601/Wallet_javadev
 EXPOSE 8080
-ENTRYPOINT [ "java", "-jar", "oci-microservice.jar" ]
+ENTRYPOINT [ "java", "-jar", "oci-microservice-a01568601.jar" ]
